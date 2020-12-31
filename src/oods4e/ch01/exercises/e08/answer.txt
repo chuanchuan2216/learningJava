@@ -1,0 +1,3 @@
+    public int compareTo(Date anotherDate) {
+        return this.lilian() - anotherDate.lilian();
+    }

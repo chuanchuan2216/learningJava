@@ -1,0 +1,305 @@
+1966年
+艾伦·佩利
+Alan J. Perlis
+高级程序设计技巧，编译器构造
+
+1967年
+莫里斯·威尔克斯
+Maurice V. Wilkes
+存储程序式计算机EDSAC，程序库
+
+1968年
+理查德·卫斯里·汉明
+Richard Hamming
+数值方法，自动编码系统，错误检测和纠错码
+
+1969年
+马文·明斯基
+Marvin Minsky
+人工智能
+
+1970年
+詹姆斯·维尔金森
+James H. Wilkinson
+数值分析，线性代数，倒退错误分析
+
+1971年
+约翰·麦卡锡
+John McCarthy
+人工智能
+
+1972年
+艾兹格·迪科斯彻
+Edsger Dijkstra
+程序设计语言的科学与艺术
+
+1973年
+查理士·巴赫曼
+Charles W. Bachman
+数据库技术
+
+1974年
+高德纳
+Donald E. Knuth
+算法分析、程序设计语言的设计、程序设计
+
+1975年
+艾伦·纽厄尔
+赫伯特·西蒙
+Allen Newell
+Herbert A. Simon
+人工智能，人类认知心理学和列表处理 （list processing）
+
+1976年
+迈克尔·拉宾
+达纳·斯科特
+Michael O. Rabin
+Dana S. Scott
+非确定性自动机
+
+1977年
+约翰·巴克斯
+John Backus
+高级编程系统，程序设计语言规范的形式化定义
+
+1978年
+罗伯特·弗洛伊德
+Robert W. Floyd
+设计高效可靠软件的方法学
+
+1979年
+肯尼斯·艾佛森
+Kenneth E. Iverson
+程序设计语言和数学符号，互动系统的设计，运用 APL进行教学，程序设计语言的理论与实践
+
+1980年
+东尼·霍尔
+C. Antony R. Hoare
+程序设计语言的定义与设计
+
+1981年
+埃德加·科德
+Edgar F. Codd
+数据库系统，尤其是关系型数据库
+
+1982年
+史提芬·古克
+Stephen A. Cook
+计算复杂度
+
+1983年
+肯·汤普逊
+丹尼斯·里奇
+Ken Thompson
+Dennis M. Ritchie
+UNIX操作系统和C语言
+
+1984年
+尼古拉斯·沃斯
+Niklaus Wirth
+程序设计语言设计、程序设计
+
+1985年
+理查德·卡普
+Richard M. Karp
+算法理论，尤其是NP-完全性理论
+
+1986年
+约翰·霍普克罗夫特
+罗伯特·塔扬
+John Hopcroft
+Robert Tarjan
+算法和数据结构的设计与分析
+
+1987年
+约翰·科克
+John Cocke
+编译理论，大型系统的体系结构，及精简指令集（RISC）计算机的开发
+
+1988年
+伊凡·苏泽兰
+Ivan Sutherland
+计算机图形学
+
+1989年
+威廉·卡亨
+William Morton Kahan
+数值分析
+
+1990年
+费尔南多·考巴脱
+Fernando J. Corbató
+CTSS和Multics
+
+1991年
+罗宾·米尔纳
+Robin Milner
+LCF，ML语言，CCS
+
+1992年
+巴特勒·兰普森
+Butler W. Lampson
+分布式，个人计算环境
+
+1993年
+尤里斯·哈特马尼斯
+理查德·斯特恩斯
+Juris Hartmanis
+Richard E. Stearns
+计算复杂度理论
+
+1994年
+爱德华·费根鲍姆
+拉吉·瑞迪
+Edward Feigenbaum
+Raj Reddy
+大规模人工智能系统
+
+1995年
+曼纽尔·布卢姆
+Manuel Blum
+计算复杂度理论，及其在密码学和程序校验上的应用
+
+1996年
+阿米尔·伯努利
+Amir Pnueli
+时序逻辑，程序与系统验证
+
+1997年
+道格拉斯·恩格尔巴特
+Douglas Engelbart
+互动计算
+
+1998年
+詹姆斯·尼古拉·格雷
+James Gray
+数据库与事务处理
+
+1999年
+弗雷德里克·布鲁克斯
+Frederick Phillips Brooks，Jr．
+计算机体系结构，操作系统，软件工程
+
+2000年
+姚期智
+Andrew Chi-Chih Yao
+计算理论，包括伪随机数生成，密码学与通信复杂度
+
+2001年
+奥利-约翰·达尔
+克利斯登·奈加特
+Ole-Johan Dahl
+Kristen Nygaard
+面向对象编程
+
+2002年
+罗纳德·李维斯特
+阿迪·萨莫尔
+伦纳德·阿德曼
+Ronald L. Rivest
+Adi Shamir
+Leonard M. Adleman
+公钥密码学（RSA加密算法）
+
+2003年
+艾伦·凯
+Alan Kay
+面向对象编程
+
+2004年
+文特·瑟夫
+罗伯特·卡恩
+Vinton G. Cerf
+Robert E. Kahn
+TCP/IP协议
+
+2005年
+彼得·诺尔
+Peter Naur
+Algol 60语言
+
+2006年
+法兰西斯·艾伦
+Frances E. Allen
+优化编译器
+
+2007年
+爱德蒙·克拉克
+艾伦·爱默生
+约瑟夫·斯发基斯
+Edmund M. Clarke
+Allen Emerson
+Joseph Sifakis
+开发自动化方法检测计算机硬件和软件中的设计错误
+
+2008年
+芭芭拉·利斯科夫
+Barbara Liskov
+编程语言和系统设计的实践与理论
+
+2009年
+查尔斯·萨克尔
+Charles Thacker
+帮助设计、制造第一款现代PC
+
+2010年
+莱斯利·瓦伦特
+Leslie Valiant
+对众多计算理论所做的变革性的贡献
+
+2011年
+犹大·伯尔
+Judea Pearl
+人工智能
+
+2012年
+莎菲·戈德瓦塞尔
+希尔维奥·米卡利
+Shafi Goldwasser
+Silvio Micali
+在密码学和复杂理论领域做出创举性工作
+
+2013年
+莱斯利·兰伯特
+Leslie Lamport
+在提升计算机系统的可靠性及稳定性领域的杰出贡献
+
+2014年
+迈克尔·斯通布雷克
+Michael Stonebraker
+对现代数据库系统底层的概念与实践所做出的基础性贡献
+
+2015年
+惠特菲尔德·迪菲
+马丁·赫尔曼
+Whitfield Diffie
+Martin Hellman
+非对称加密的创始人
+
+2016年
+蒂姆·伯纳斯·李
+Tim Berners-Lee
+万维网的发明者
+
+2017年
+约翰·轩尼诗
+大卫·帕特森
+John Hennessy
+David Patterson
+开发了RISC微处理器并且让这一概念流行起来的工程
+
+2018年
+约舒亚·本希奥
+杰弗里·欣顿
+扬·莱坎
+Yoshua Bengio
+Geoffrey Hinton
+Yann LeCun
+因在人工智能深度学习方面的贡献
+
+2019年
+——
+艾德文·卡特姆
+Patrick M. Hanrahan
+Edwin E. Catmull
+对3D计算机图形学的贡献，以及这些技术对电影制作和计算机生成图像（CGI）等应用的革命性影响
