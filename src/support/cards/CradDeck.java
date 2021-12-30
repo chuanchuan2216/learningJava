@@ -1,6 +1,6 @@
 package support.cards;
 
-import ch06.lists.ArrayBoundedList;
+import oods4e.ch06.lists.ArrayBoundedList;
 
 import javax.swing.*;
 import java.util.Iterator;
