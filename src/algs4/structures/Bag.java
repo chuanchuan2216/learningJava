@@ -1,8 +1,5 @@
 package algs4.structures;
 
-import support.Stdlib.StdIn;
-import support.Stdlib.StdOut;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
