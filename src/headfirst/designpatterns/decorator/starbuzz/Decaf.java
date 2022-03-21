@@ -1,7 +1,7 @@
 package headfirst.designpatterns.decorator.starbuzz;
 
-public class Decat extends Beverage{
-    public Decat() {
+public class Decaf extends Beverage{
+    public Decaf() {
         description = "Decat";
     }
 

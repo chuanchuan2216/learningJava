@@ -3,6 +3,10 @@ package headfirst.designpatterns.decorator.starbuzz;
 public class Soy extends Condiment{
     Beverage beverage;
 
+    public Soy(Beverage beverage) {
+        this.beverage = beverage;
+    }
+
     @Override
     public double cost() {
         return beverage.cost()+0.15;
