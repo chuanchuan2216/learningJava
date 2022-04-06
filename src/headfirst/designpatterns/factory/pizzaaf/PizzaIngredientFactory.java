@@ -6,5 +6,5 @@ public interface PizzaIngredientFactory {
     public Cheese createCheese();
     public Veggies[] createVeggies();
     public Pepperoni createPepperoni();
-    public Clams createClames();
+    public Clams createClam();
 }

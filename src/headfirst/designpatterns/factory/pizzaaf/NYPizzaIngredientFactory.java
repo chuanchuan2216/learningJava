@@ -1,27 +1,28 @@
 package headfirst.designpatterns.factory.pizzaaf;
 
-public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
+public class NYPizzaIngredientFactory implements PizzaIngredientFactory{
     @Override
     public Dough createDough() {
-        return new ThickCrustDough();
+        return new ThinCrustDough();
     }
 
     @Override
     public Sauce createSauce() {
-        return new PlumTomatoSauce();
+        return new MarinaraSauce();
     }
 
     @Override
     public Cheese createCheese() {
-        return new MozzarellaCheese();
+        return new ReggianoCheese();
     }
 
     @Override
     public Veggies[] createVeggies() {
-        Veggies[] veggies={
-                new BlackOlives(),
-                new Spinach(),
-                new Eggplant()
+        Veggies[] veggies = {
+                new Garlic(),
+                new Onion(),
+                new Mushroom(),
+                new RedPepper()
         };
         return veggies;
     }
@@ -33,6 +34,6 @@ public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 
     @Override
     public Clams createClam() {
-        return new FrozenClams();
+        return new FreshClams();
     }
 }
