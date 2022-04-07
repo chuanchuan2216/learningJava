@@ -7,32 +7,43 @@ public abstract class Pizza {
     String dough;
     String sauce;
 
-    ArrayList toppings = new ArrayList();
+    ArrayList<String> toppings = new ArrayList<String>();
 
     public String getName() {
         return name;
     }
 
-    void prepare(){
-        System.out.println("Preparing "+name);
+    void prepare() {
+        System.out.println("Preparing " + name);
         System.out.println("Tossing dough...");
         System.out.println("Adding sauce...");
         System.out.println("Adding toppings:");
         for (int i = 0; i < toppings.size(); i++) {
-            System.out.println(" "+toppings.get(i));
+            System.out.println(" " + toppings.get(i));
         }
     }
 
-    void bake(){
+    void bake() {
         System.out.println("Bake for 25 minutes at 350");
     }
 
-    void cut(){
+    void cut() {
         System.out.println("Cutting the pizza int diagonal slices");
     }
 
-    void box(){
+    void box() {
         System.out.println("Place pizza in official PizzaStore box");
     }
 
+    @Override
+    public String toString() {
+        StringBuffer display = new StringBuffer();
+        display.append("-----" + name + "-----");
+        display.append(dough + "\n");
+        display.append(sauce + "\n");
+        for (String topping : toppings) {
+            display.append(topping + "\n");
+        }
+        return display.toString();
+    }
 }

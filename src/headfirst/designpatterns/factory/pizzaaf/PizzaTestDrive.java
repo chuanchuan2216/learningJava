@@ -28,5 +28,5 @@ public class PizzaTestDrive {
 
         pizza = chicagoStore.orderPizza("veggie");
         System.out.println("Joel ordered a " + pizza + "\n");
-}
+    }
 }
