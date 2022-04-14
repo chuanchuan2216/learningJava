@@ -1,6 +1,8 @@
 package oods4e.ch05.apps;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Scanner;
 
 import oods4e.ch05.collections.*;
@@ -13,15 +15,14 @@ public class VocabularyDensity {
 
         final int CAPACITY = 1000;
         String fname = "src/support/input/Shakespeare.txt";
-        //String fname = "src/input/glossary.txt";
         String word;
         int numWords = 0;
         int uniqWords;
         double density;
 
         CollectionInterface<String> words;
-        words = new ArrayCollection<String>(30000);
-        //words = new SortedArrayCollection<String>(CAPACITY);
+        //words = new ArrayCollection<String>(30000);
+        words = new SortedArrayCollection<String>(CAPACITY);
         //words = new LinkedCollection<String>();
 
         //Collection words = new ArrayList<String>();

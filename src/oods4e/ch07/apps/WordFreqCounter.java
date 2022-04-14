@@ -26,7 +26,7 @@ public class WordFreqCounter {
 
         Scanner scan = new Scanner(System.in);
 
-        String fn= "src/input/Shakespeare.txt";
+        String fn= "src/support/input/Shakespeare.txt";
         Scanner wordsIn = new Scanner(new FileReader(fn));
         wordsIn.useDelimiter("[^a-zA-Z']+");
 
