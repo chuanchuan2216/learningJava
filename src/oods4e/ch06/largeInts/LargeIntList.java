@@ -21,7 +21,7 @@ public class LargeIntList {
 
     public void addFront(byte element) {
         DLLNode<Byte> newNode = new DLLNode<Byte>(element);
-        newNode.setForword(listFirst);
+        newNode.setForward(listFirst);
         newNode.setBack(null);
         if (listFirst == null) {
             listFirst = newNode;
@@ -35,14 +35,14 @@ public class LargeIntList {
 
     public void addEnd(byte element) {
         DLLNode<Byte> newNode = new DLLNode<Byte>(element);
-        newNode.setForword(listLast);
-        newNode.setForword(null);
+        newNode.setForward(listLast);
+        newNode.setForward(null);
         newNode.setBack(listLast);
         if (listFirst == null) {
             listFirst = newNode;
             listLast = newNode;
         } else {
-            listLast.setForword(newNode);
+            listLast.setForward(newNode);
             listLast = newNode;
         }
         numElements++;
@@ -62,7 +62,7 @@ public class LargeIntList {
                 if (!hasNext())
                     throw new IndexOutOfBoundsException("LargeIntList列表forword迭代器无法访问下一个元素。");
                 Byte hold = next.getInfo();
-                next = next.getForword();
+                next = next.getForward();
                 return hold;
             }
 

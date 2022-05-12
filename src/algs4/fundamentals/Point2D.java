@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public final class Point2D implements Comparable<Point2D> {
+
     public static final Comparator<Point2D> X_ORDER = new XOrder();
     public static final Comparator<Point2D> Y_ORDER = new YOrder();
     public static final Comparator<Point2D> R_ORDER = new ROrder();
@@ -15,16 +16,17 @@ public final class Point2D implements Comparable<Point2D> {
     private final double y;
 
     /**
+     * 创建一个点
      *
-     * @param x
-     * @param y
+     * @param x 点的x坐标
+     * @param y 点的y坐标
      */
     public Point2D(double x, double y) {
         if (Double.isInfinite(x) || Double.isInfinite(y)) {
             throw new IllegalArgumentException("坐标值必须是有限数");
         }
         if (Double.isNaN(x) || Double.isNaN(y)) {
-            throw new IllegalArgumentException("坐标值不能是NaN");
+            throw new IllegalArgumentException("坐标值不能是非数字");
         }
         if (x == 0.0) {
             this.x = 0.0;
@@ -38,30 +40,64 @@ public final class Point2D implements Comparable<Point2D> {
         }
     }
 
+    /**
+     * 返回x坐标
+     *
+     * @return x坐标
+     */
     public double x() {
         return x;
     }
 
+    /**
+     * 返回y坐标
+     *
+     * @return y坐标
+     */
     public double y() {
         return y;
     }
 
+    /**
+     * 返回极径（极坐标）
+     *
+     * @return 极径（极坐标）
+     */
     public double r() {
         return Math.sqrt(x * x + y * y);
     }
 
+    /**
+     * 返回r极角（极坐标）
+     *
+     * @return 极角（极坐标）
+     */
     public double theta() {
         return Math.atan2(y, x);
     }
 
+    /**
+     * 返回当前点和另一个点的连线的倾斜角
+     *
+     * @param that 另一个点
+     * @return 两点连线的倾斜角
+     */
     private double angleTo(Point2D that) {
         double dx = that.x - this.x;
         double dy = that.y - this.y;
         return Math.atan2(dy, dx);
     }
 
+    /**
+     * 返回三个点的状态
+     *
+     * @param a 第一个点
+     * @param b 第二个点
+     * @param c 第三个点
+     * @return -1，三点顺时针；0，三点一线；+1，三点逆时针
+     */
     public static int ccw(Point2D a, Point2D b, Point2D c) {
-        double area2 = (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+        double area2 = area2(a, b, c);
         if (area2 < 0) {
             return -1;
         } else if (area2 > 0) {
@@ -71,29 +107,53 @@ public final class Point2D implements Comparable<Point2D> {
         }
     }
 
+    /**
+     * 返回三个点围成的三角形面积的平方
+     *
+     * @param a 第一个点
+     * @param b 第二个点
+     * @param c 第三个点
+     * @return 三个点围成的三角形面积的平方
+     */
     public static double area2(Point2D a, Point2D b, Point2D c) {
         return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
     }
 
+    /**
+     * 返回两点之间的欧几里得距离
+     *
+     * @param that 另一个点
+     * @return 两点之间的欧几里得距离
+     */
     public double distanceTo(Point2D that) {
         double dx = this.x - that.x;
         double dy = this.y - that.y;
         return Math.sqrt(dx * dx + dy * dy);
     }
 
+    /**
+     * 返回两点之间的欧几里得距离的平方
+     * @param that 另一个点
+     * @return 两点之间的欧几里得距离的平方
+     */
     public double distanceSquaredTo(Point2D that) {
         double dx = this.x - that.x;
         double dy = this.y - that.y;
         return dx * dx + dy * dy;
     }
 
+    /**
+     * 通过y坐标比较两个点
+     * @param that 要比较的另一个点
+     * @return
+     */
     @Override
     public int compareTo(Point2D that) {
         if (this.y < that.y) {
             return -1;
         } else if (this.y > that.y) {
             return +1;
-        } else if (this.x < that.y) {
+        } else if (this.x < that.x) {
             return -1;
         } else if (this.x > that.x) {
             return +1;
@@ -101,6 +161,7 @@ public final class Point2D implements Comparable<Point2D> {
             return 0;
         }
     }
+
 
     public Comparator<Point2D> polarOrder() {
         return new PolarOrder();

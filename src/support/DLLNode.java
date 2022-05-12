@@ -3,11 +3,11 @@ package support;
 public class DLLNode<T> {
 
     private T info;
-    private DLLNode<T> forword, back;
+    private DLLNode<T> forward, back;
 
     public DLLNode(T info) {
         this.info = info;
-        this.forword = null;
+        this.forward = null;
         this.back = null;
     }
 
@@ -19,12 +19,12 @@ public class DLLNode<T> {
         this.info = info;
     }
 
-    public DLLNode<T> getForword() {
-        return forword;
+    public DLLNode<T> getForward() {
+        return forward;
     }
 
-    public void setForword(DLLNode<T> forword) {
-        this.forword = forword;
+    public void setForward(DLLNode<T> forward) {
+        this.forward = forward;
     }
 
     public DLLNode<T> getBack() {
