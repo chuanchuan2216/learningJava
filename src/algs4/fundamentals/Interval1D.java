@@ -13,6 +13,11 @@ public class Interval1D {
     private final double min;
     private final double max;
 
+    /**
+     * 初始化一个间隔
+     * @param min 间隔的端点的较小值
+     * @param max 间隔的端点的较大值
+     */
     public Interval1D(double min, double max) {
         if (Double.isInfinite(min) || Double.isInfinite(max)) {
             throw new IllegalArgumentException("坐标值必须是有限数");
@@ -34,24 +39,45 @@ public class Interval1D {
         }
     }
 
+    /**
+     * 返回间隔的端点的较小值
+     * @return 间隔的端点的较小值
+     */
     @Deprecated
     public double left() {
         return min;
     }
 
+    /**
+     * 返回间隔的端点的较大值
+     * @return 间隔的端点的较大值
+     */
     @Deprecated
     public double right() {
         return max;
     }
 
+    /**
+     * 返回间隔的端点的较小值
+     * @return 间隔的端点的较小值
+     */
     public double min() {
         return min;
     }
 
+    /**
+     * 返回间隔的端点的较大值
+     * @return 间隔的端点的较大值
+     */
     public double max() {
         return max;
     }
 
+    /**
+     * 判断两个间隔是否交叉
+     * @param that 另一个间隔
+     * @return 交叉返回true，否则返回false
+     */
     public boolean intersects(Interval1D that) {
         if (this.min < that.min) {
             return false;
@@ -62,10 +88,19 @@ public class Interval1D {
         return true;
     }
 
+    /**
+     * 判断某个点是否包含在间隔的区间内
+     * @param x 要判断的点
+     * @return x包含在间隔内返回true，否则返回false
+     */
     public boolean contains(double x) {
         return (min <= x) && (x <= max);
     }
 
+    /**
+     * 返回间隔的长度
+     * @return 间隔的长度
+     */
     public double length() {
         return max - min;
     }
@@ -96,7 +131,6 @@ public class Interval1D {
         int hash2 = ((Double) max).hashCode();
         return 31 * hash1 + hash2;
     }
-
 
     private static class MinEndpointComparator implements Comparator<Interval1D> {
         @Override

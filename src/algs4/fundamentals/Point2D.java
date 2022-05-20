@@ -278,7 +278,7 @@ public final class Point2D implements Comparable<Point2D> {
             return false;
         }
         Point2D that = (Point2D) other;
-        return this.x == that.x & this.y == that.y;
+        return this.x == that.x && this.y == that.y;
     }
 
     @Override

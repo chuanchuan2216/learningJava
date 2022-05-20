@@ -7,10 +7,17 @@ import java.util.Comparator;
 public class Date implements Comparable<Date> {
     private static final int[] DAYS = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-    private final int year;
-    private final int month;
-    private final int day;
+    private final int year;  //年份
+    private final int month; //月份，1-12
+    private final int day;   //日期，1-DAYS[month]
 
+    /**
+     * 初始化一个日期对象，根据年月日
+     *
+     * @param year  年
+     * @param month 月
+     * @param day   日
+     */
     public Date(int year, int month, int day) {
         if (!isValid(year, month, day)) {
             throw new IllegalArgumentException("无效的日期");
@@ -20,6 +27,11 @@ public class Date implements Comparable<Date> {
         this.day = day;
     }
 
+    /**
+     * 初始化一个日期对象，根据字符串，格式为YYYY.MM.DD
+     *
+     * @param date 日期格式的字符串
+     */
     public Date(String date) {
         String[] fields = date.split(".");
         if (fields.length != 3) {
@@ -33,18 +45,41 @@ public class Date implements Comparable<Date> {
         }
     }
 
+    /**
+     * 返回年份
+     *
+     * @return 年份
+     */
     public int year() {
         return year;
     }
 
+    /**
+     * 返回月份
+     *
+     * @return 月份
+     */
     public int month() {
         return month;
     }
 
+    /**
+     * 返回日期
+     *
+     * @return 日期
+     */
     public int day() {
         return day;
     }
 
+    /**
+     * 验证日期是否有效
+     *
+     * @param y 年
+     * @param m 月
+     * @param d 日
+     * @return 有效返回true，无效返回false
+     */
     private static boolean isValid(int y, int m, int d) {
         if (m < 1 || m > 12) {
             return false;
@@ -58,6 +93,12 @@ public class Date implements Comparable<Date> {
         return true;
     }
 
+    /**
+     * 验证年份是否为闰年
+     *
+     * @param y 年
+     * @return 闰年返回true，否则返回false
+     */
     private static boolean isLeapYear(int y) {
         if (y % 400 == 0) {
             return true;
@@ -68,6 +109,11 @@ public class Date implements Comparable<Date> {
         return y % 4 == 0;
     }
 
+    /**
+     * 返回当前日期的后一天
+     *
+     * @return 当前日期的后一天
+     */
     public Date next() {
         if (isValid(year, month, day + 1)) {
             return new Date(year, month, day + 1);
@@ -78,14 +124,32 @@ public class Date implements Comparable<Date> {
         }
     }
 
+    /**
+     * 比较两个日期
+     *
+     * @param that 另一个日期
+     * @return 当前日期在另一个日期之后返回true，否则返回false
+     */
     public boolean isAfter(Date that) {
         return compareTo(that) > 0;
     }
 
+    /**
+     * 比较两个日期
+     *
+     * @param that 另一个日期
+     * @return 当前日期在另一个日期之前返回true，否则返回false
+     */
     public boolean isBefore(Date that) {
         return compareTo(that) < 0;
     }
 
+    /**
+     * 比较两个日期
+     *
+     * @param that 另一个日期
+     * @return 0，日期相同；-1，当前日期在前；+1，当前日期在后。
+     */
     @Override
     public int compareTo(Date that) {
         if (this.year < that.year) {
@@ -147,7 +211,7 @@ public class Date implements Comparable<Date> {
         StdOut.println(today.next().isAfter(today));
 
 
-        Date birthday = new Date(1982, 12, 27);
+        Date birthday = new Date("1982.12.27");
         StdOut.println(birthday);
         for (int i = 0; i < 10; i++) {
             birthday = birthday.next();
