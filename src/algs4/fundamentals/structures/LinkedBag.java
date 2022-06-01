@@ -6,76 +6,55 @@ import support.Stdlib.StdOut;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Bag<Item> implements Iterable<Item> {
-
-    private Node<Item> first;
+public class LinkedBag<Item> implements Iterable<Item> {
+    private Node first;
     private int n;
 
-    private static class Node<Item> {
+    private class Node {
         private Item item;
-        private Node<Item> next;
+        private Node next;
     }
 
-    /**
-     * 初始化一个空的背包
-     */
-    public Bag() {
+    public LinkedBag() {
         first = null;
         n = 0;
     }
 
-    /**
-     * 判断背包是否为空
-     *
-     * @return {@code true} 背包为空返回true
-     * {@code false} 背包不空返回false
-     */
     public boolean isEmpty() {
         return first == null;
     }
 
-    /**
-     * 返回背包元素的个数
-     *
-     * @return 背包元素的个数
-     */
     public int size() {
         return n;
     }
 
-    /**
-     * 向背包添加元素
-     *
-     * @param item 需要添加的元素
-     */
     public void add(Item item) {
-        Node<Item> oldFirst = first;
-        first = new Node<Item>();
+        Node oldfirst = first;
+        first = new Node();
         first.item = item;
-        first.next = oldFirst;
+        first.next = oldfirst;
         n++;
     }
 
-    @Override
     public Iterator<Item> iterator() {
-        return new LinkedIterator(first);
+        return new LinkedIterator();
     }
 
     private class LinkedIterator implements Iterator<Item> {
-        private Node<Item> current;
+        private Node current;
 
-        public LinkedIterator(Node<Item> first) {
+        public LinkedIterator() {
             current = first;
-        }
-
-        @Override
-        public boolean hasNext() {
-            return current != null;
         }
 
         @Override
         public void remove() {
             throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
         }
 
         @Override

@@ -2,6 +2,7 @@ package algs4.fundamentals;
 
 import support.Stdlib.In;
 import support.Stdlib.StdOut;
+import support.Stdlib.Stopwatch;
 
 import java.util.Arrays;
 
@@ -75,7 +76,7 @@ public class ThreeSumFast {
 
         Stopwatch timer = new Stopwatch();
         int count = count(a);
-        StdOut.println("elapsed time = " + timer.elapsedTime());
+        StdOut.println("消耗时间：" + timer.elapsedTime());
         StdOut.println(count);
     }
 }

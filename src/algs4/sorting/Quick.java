@@ -1,4 +1,4 @@
-package algs4.sorts;
+package algs4.sorting;
 
 import support.Stdlib.StdRandom;
 

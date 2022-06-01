@@ -1,4 +1,4 @@
-package algs4.sorts;
+package algs4.sorting;
 
 public class Merge extends SortTemplate {
     private static Comparable[] aux;

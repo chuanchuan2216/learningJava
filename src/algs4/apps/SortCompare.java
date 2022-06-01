@@ -1,6 +1,6 @@
 package algs4.apps;
 
-import algs4.sorts.*;
+import algs4.sorting.*;
 import support.Stdlib.StdOut;
 import support.Stdlib.StdRandom;
 import support.Stdlib.Stopwatch;

@@ -1,4 +1,4 @@
-package algs4.sorts;
+package algs4.sorting;
 
 import algs4.structures.IndexMinPQ;
 import support.Stdlib.In;

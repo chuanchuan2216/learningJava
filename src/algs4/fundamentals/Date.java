@@ -33,7 +33,7 @@ public class Date implements Comparable<Date> {
      * @param date 日期格式的字符串
      */
     public Date(String date) {
-        String[] fields = date.split(".");
+        String[] fields = date.split("\\."); // 注意：【* ^ : | . \】需要转义的转义
         if (fields.length != 3) {
             throw new IllegalArgumentException("无效的日期");
         }
