@@ -15,19 +15,38 @@ public class LinkedBag<Item> implements Iterable<Item> {
         private Node next;
     }
 
+    /**
+     * 初始化一个空的背包
+     */
     public LinkedBag() {
         first = null;
         n = 0;
     }
 
+    /**
+     * 判断背包是否为空
+     *
+     * @return {@code true} 背包为空返回true
+     * {@code false} 背包不空返回false
+     */
     public boolean isEmpty() {
         return first == null;
     }
 
+    /**
+     * 返回背包元素的个数
+     *
+     * @return 背包元素的个数
+     */
     public int size() {
         return n;
     }
 
+    /**
+     * 向背包添加元素
+     *
+     * @param item 需要添加的元素
+     */
     public void add(Item item) {
         Node oldfirst = first;
         first = new Node();
