@@ -18,6 +18,6 @@ public class TestUF {
             unionByRankUf.union(p,q);
             StdOut.println(p+" "+q);
         }
-        StdOut.println(unionByRankUf.count());
+        StdOut.println("连通分量个数："+unionByRankUf.count());
     }
 }
