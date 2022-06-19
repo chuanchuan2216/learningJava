@@ -11,7 +11,7 @@ public class ST<Key extends Comparable<Key>, Value> implements Iterable<Key> {
     private TreeMap<Key, Value> st;
 
     /**
-     * 创建一个有序符号表
+     * 创建一个有序符号表（基于Java的TreeMap）
      */
     public ST() {
         st = new TreeMap<Key, Value>();
@@ -31,7 +31,7 @@ public class ST<Key extends Comparable<Key>, Value> implements Iterable<Key> {
     }
 
     /**
-     * 将键值对存入表中，若值为null则将键key删除
+     * 将键值对存入符号表中，若值为null则将键key删除
      *
      * @param key 键key
      * @param val 值val
@@ -48,7 +48,7 @@ public class ST<Key extends Comparable<Key>, Value> implements Iterable<Key> {
     }
 
     /**
-     * 从表中删除键key及其对应的值
+     * 从符号表中删除键key及其对应的值
      *
      * @param key 键key
      */
@@ -72,10 +72,10 @@ public class ST<Key extends Comparable<Key>, Value> implements Iterable<Key> {
     }
 
     /**
-     * 判断键key是否存在于表中
+     * 判断键key是否存在于符号表中
      *
      * @param key 键key
-     * @return 键key存在于表中返回true，否则返回false
+     * @return 键key存在于符号表中返回true，否则返回false
      */
     public boolean contains(Key key) {
         if (key == null) {
@@ -94,16 +94,16 @@ public class ST<Key extends Comparable<Key>, Value> implements Iterable<Key> {
     }
 
     /**
-     * 判断表是否为空
+     * 判断符号表是否为空
      *
-     * @return 表为空返回true，否则返回false
+     * @return 符号表为空返回true，否则返回false
      */
     public boolean isEmpty() {
         return size() == 0;
     }
 
     /**
-     * 返回表中的所有键
+     * 返回符号表中的所有键
      *
      * @return 表中的所有键
      */
@@ -122,7 +122,7 @@ public class ST<Key extends Comparable<Key>, Value> implements Iterable<Key> {
     }
 
     /**
-     * 返回表中最小的键key
+     * 返回符号表中最小的键key
      *
      * @return 表中最小的键key
      */
@@ -134,7 +134,7 @@ public class ST<Key extends Comparable<Key>, Value> implements Iterable<Key> {
     }
 
     /**
-     * 返回表中最大的键key
+     * 返回符号表中最大的键key
      *
      * @return 表中最大的键key
      */

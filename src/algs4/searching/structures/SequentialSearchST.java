@@ -20,11 +20,14 @@ public class SequentialSearchST<Key, Value> {
         }
     }
 
+    /**
+     * 创建一个有序符号表（基于顺序查找的无序链表）
+     */
     public SequentialSearchST() {
     }
 
     /**
-     * 返回表中键值对的数量
+     * 返回符号表中键值对的数量
      *
      * @return 表中键值对的数量
      */
