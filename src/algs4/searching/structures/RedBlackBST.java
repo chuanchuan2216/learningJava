@@ -85,6 +85,9 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
      * @return 键key存在于符号表中返回true，否则返回false
      */
     public boolean contains(Key key) {
+        if (key == null) {
+            throw new IllegalArgumentException("调用contains()时没有给定键key");
+        }
         return get(key) != null;
     }
 

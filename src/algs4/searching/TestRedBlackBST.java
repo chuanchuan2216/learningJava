@@ -1,14 +1,14 @@
 package algs4.searching;
 
-import algs4.searching.structures.BST;
+import algs4.searching.structures.RedBlackBST;
 import support.Stdlib.StdOut;
 
-public class TestBST {
+public class TestRedBlackBST {
     public static void main(String[] args) {
         String test = "S E A R C H E X A M P L E";
         String[] keys = test.split(" ");
         int n = keys.length;
-        BST<String ,Integer> st = new BST<>();
+        RedBlackBST<String ,Integer> st = new RedBlackBST<>();
         for (int i = 0; i < n; i++) {
             st.put(keys[i],i );
         }
@@ -39,7 +39,7 @@ public class TestBST {
         StdOut.println("-------------------------");
         for (char i = 'A'; i <= 'X'; i++) {
             String s = i + "";
-            StdOut.printf("%2s %4d %4s %4s %4s\n", s, st.rank(s), st.floor(s), st.floor2(s), st.ceiling(s));
+            StdOut.printf("%2s %4d %4s %4s\n", s, st.rank(s), st.floor(s), st.ceiling(s));
         }
         StdOut.println();
 
