@@ -7,14 +7,21 @@ import support.Stdlib.StdOut;
 public class SeparateChainingHashST<Key,Value> {
     private static final int INIT_CAPACITY = 4;
 
-    private int n;
-    private int m;
-    private SequentialSearchST<Key, Value>[] st;
+    private int n;      // 散列表中键值对的数量
+    private int m;      // 散列表中链表的数量
+    private SequentialSearchST<Key, Value>[] st;    // 存放链表对象的数组
 
+    /**
+     * 创建一个散列表表（基于拉链法）
+     */
     public SeparateChainingHashST() {
         this(INIT_CAPACITY);
     }
 
+    /**
+     * 创建一个具有m条链表的散列表
+     * @param m 指定散列表中链表的数量m
+     */
     public SeparateChainingHashST(int m) {
         this.m = m;
         st = (SequentialSearchST<Key, Value>[]) new SequentialSearchST[m];
@@ -23,6 +30,10 @@ public class SeparateChainingHashST<Key,Value> {
         }
     }
 
+    /**
+     * 根据给定的链表的数量chains重置散列表
+     * @param chains 给定的链表的数量chains
+     */
     private void resize(int chains) {
         SeparateChainingHashST<Key, Value> temp = new SeparateChainingHashST<>(chains);
         for (int i = 0; i < m; i++) {
@@ -35,24 +46,49 @@ public class SeparateChainingHashST<Key,Value> {
         this.st = temp.st;
     }
 
+    /**
+     * 返回键key的散列值（0到m-1之间）
+     * @param key 键key
+     * @return 键key的散列值
+     */
     private int hashTextbook(Key key) {
         return (key.hashCode() & 0x7fffffff) % m;
     }
 
+    /**
+     * 返回键key的散列值（0到m-1之间），假定m是2的幂
+     * @param key 键key
+     * @return 键key的散列值
+     */
     private int hash(Key key) {
         int h = key.hashCode();
         h ^= (h >>> 20) ^ (h >>> 12) ^ (h >>> 7) ^ (h >>> 4);
         return h & (m - 1);
     }
 
+    /**
+     * 返回散列表中键值对的数量
+     * @return 散列表中键值对的数量
+     */
     public int size() {
         return n;
     }
 
+    /**
+     * 判断散列表是否为空
+     *
+     * @return 散列表为空返回true，否则返回false
+     */
     public boolean isEmpty() {
         return size() == 0;
     }
 
+    /**
+     * 判断键key是否存在于散列表中
+     *
+     * @param key 键key
+     * @return 键key存在于散列表中返回true，否则返回false
+     */
     public boolean contains(Key key) {
         if (key == null) {
             throw new IllegalArgumentException("调用contains()时没有给定键key");

@@ -54,7 +54,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
     }
 
     /**
-     * 判断符号表表是否为空
+     * 判断符号表是否为空
      *
      * @return 符号表为空返回true，否则返回false
      */

@@ -48,7 +48,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     }
 
     /**
-     * 判断符号表表是否为空
+     * 判断符号表是否为空
      *
      * @return 符号表为空返回true，否则返回false
      */
@@ -367,6 +367,11 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         return h;
     }
 
+    /**
+     * 以结点h为根结点，
+     * @param h
+     * @return
+     */
     private Node balance(Node h) {
         if (isRed(h.right) && !isRed(h.left)) {
             h = rotateLeft(h);
@@ -702,10 +707,19 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    /**
+     * 返回BST的高度
+     * @return BST的高度
+     */
     public int height() {
         return height(root);
     }
 
+    /**
+     * 返回以结点x为根结点的BST的高度
+     * @param x 结点x
+     * @return
+     */
     private int height(Node x) {
         if (x == null) {
             return -1;

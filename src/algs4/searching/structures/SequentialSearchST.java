@@ -36,7 +36,7 @@ public class SequentialSearchST<Key, Value> {
     }
 
     /**
-     * 判断表是否为空
+     * 判断符号表是否为空
      *
      * @return 表为空返回true，否则返回false
      */
